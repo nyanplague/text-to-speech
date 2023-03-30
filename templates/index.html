@@ -1,0 +1,28 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+{% include "header.html" %}
+
+
+<div class="container-fluid">
+    <div class="title">
+        <p>
+            Convert PDF to speech
+        </p>
+    </div>
+
+    <div class="upload-mb-3 upload-file">
+        <form action = "/success" method = "post" enctype="multipart/form-data">
+        <label for="formFileLg" class=" form-label">Upload your PDF </label>
+        <input class="form-control form-control-lg" id="formFileLg" type="file" name="file"/>
+        <input  class="submit-button" type = "submit" value="Submit">
+    </form>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
